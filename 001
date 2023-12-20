@@ -1,0 +1,62 @@
+#-------------------------------------------------------------------------------------------------------------------------------------#
+[HTML]
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo JS</title>
+    <link rel="stylesheet" href="style.css"> <!-- link para um doc css. -->
+    <script src="js/index.js"></script>      <!-- link para um doc js. -->
+</head>
+<body>
+    <form>
+        <label for="nota1">Nota 1:</label><br>
+        <input type="text" id="nota1" name="nota1"><br>
+        <label for="nota2">Nota 2:</label><br>
+        <input type="text" id="nota2" name="nota2"><br>
+        <label for="nota3">Nota 3:</label><br>
+        <input type="text" id="nota3" name="nota3"><br>
+
+        <button type="button" onclick="calcularMedia()">Display Media</button> <!-- botao para chamar a funcao em js. -->
+    </form>
+</body> 
+</html>
+
+#-------------------------------------------------------------------------------------------------------------------------------------#
+[CSS]
+
+
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+form {
+
+    text-align: center;
+
+}
+
+
+#-------------------------------------------------------------------------------------------------------------------------------------#
+[JAVASCRIPT]
+
+function calcularMedia() {
+
+    var nota1 = parseFloat(document.getElementById("nota1").value);
+    var nota2 = parseFloat(document.getElementById("nota2").value);
+    var nota3 = parseFloat(document.getElementById("nota3").value);
+
+    var media = nota1 + nota2 + nota3 / 3;
+
+    document.getElementById("media").innerHTML = media.toFixed(2);
+
+}
+
+#-------------------------------------------------------------------------------------------------------------------------------------#
