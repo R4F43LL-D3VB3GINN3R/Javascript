@@ -12,18 +12,16 @@
 </head>
 <body>
     <form>
-        <label for="nota1">Nota 1:</label><br>
-        <input type="text" id="nota1" name="nota1"><br>
-        <label for="nota2">Nota 2:</label><br>
-        <input type="text" id="nota2" name="nota2"><br>
-        <label for="nota3">Nota 3:</label><br>
-        <input type="text" id="nota3" name="nota3"><br>
+        <label for="peso">Peso:</label><br>
+        <input type="text" id="peso" name="peso"><br>
+        <label for="altura">Altura:</label><br>
+        <input type="text" id="altura" name="altura"><br>
 
-        <button type="button" id="media" onclick ="calcularMedia()">Display Media</button> <!-- botao para chamar a funcao em js. -->
+        <button type="button" onclick ="calcularIMC()">Display IMC <span id="imc"></span></button> <!-- botao para chamar a funcao em js. -->
+        <button type="reset">Clear</button>
     </form>
 </body> 
 </html>
-
 
 #-------------------------------------------------------------------------------------------------------------------------------------#
 [CSS]
@@ -41,7 +39,6 @@ form {
     text-align: center;
 
 }
-
 
 #-------------------------------------------------------------------------------------------------------------------------------------#
 [JAVASCRIPT]
