@@ -1,0 +1,52 @@
+#-------------------------------------------------------------------------------------------------------------------------------------#
+[HTML]
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo JS</title>
+    <link rel="stylesheet" href="style.css"> <!-- link para um doc css. -->
+    <script src="js/index.js"></script>      <!-- link para um doc js. -->
+</head>
+<body>
+    <form>
+        <label for="numero">Number:</label><br>
+        <input type="text" id="random" name="numero"><br>
+
+        <button type="button" onclick ="gerarNumeroAleatorio()">Roll Dice <span id="random"></span></button> <!-- botao para chamar a funcao em js. -->
+        <button type="reset">Clear</button>
+    </form>
+</body> 
+</html>
+
+#-------------------------------------------------------------------------------------------------------------------------------------#
+[CSS]
+
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+form {
+
+    text-align: center;
+
+}
+
+#-------------------------------------------------------------------------------------------------------------------------------------#
+[JAVASCRIPT]
+
+function gerarNumeroAleatorio() {
+
+    var random1 = (Math.random() * 6 | 0) + 1;
+    
+    document.getElementById('random').innerHTML = random1;
+
+}
+
+#-------------------------------------------------------------------------------------------------------------------------------------#
